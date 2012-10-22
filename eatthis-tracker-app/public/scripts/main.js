@@ -6,6 +6,6 @@ require.config({
 });
 
 // entry point for app 
-require(['app'], function(App) {
+require(['libs/bootstrap','app'], function(BS, App) {
     App.initialize();
 });

@@ -11,6 +11,7 @@ define([
         initialize: function() {
             this.collection = new EstablishmentsCollection();
             this.collection.add({name: "Staple and Fancy"});
+            this.collection.add({});
             var compiledTemplate = _.template(
                 establishmentListTemplate, 
                 {

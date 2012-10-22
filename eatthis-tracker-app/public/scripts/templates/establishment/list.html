@@ -1,6 +1,6 @@
 <h2>You are tracking these establishments:</h2>
 <ul>
 <% _.each(establishments, function(establishment) { %>
-    <li><%= establishment.name %></li>
+    <li><%= establishment.attributes.name %></li>
 <% }); %>
 </ul>

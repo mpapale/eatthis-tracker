@@ -10,20 +10,17 @@ define([
 ], function($, _, Backbone, EstablishmentListView) {
     var AppRouter = Backbone.Router.extend({
         routes: {
-            '/': 'showEstablishments',
-            '*actions': 'defaultAction' 
+            '': ''
+        },
+
+        '': function() {
+            var establishmentListView = new EstablishmentListView();
+            establishmentListView.render();
         }
     });
 
     var initialize = function() {
         var appRouter = new AppRouter();
-        appRouter.on('showEstablishments', function() {
-            var establishmentListView = new EstablishmentListView();
-            establishmentListView.render();
-        });
-        appRouter.on('defaultAction', function(actions) {
-            console.log('No route:', actions);
-        });
         Backbone.history.start();
     };
 
